@@ -111,9 +111,9 @@ class Pay:
                 sum1 += int(pay[1])
 
         # 合計金額を出力
-        print('合計金額 : {sum0}円\n'.format(sum0))
+        print(f"合計金額 : {sum0}円")
         # 取りこぼし品目の合計を出力する
-        print('取りこぼし品目の合計 : {sum1}円\n'.format(sum1))
+        print(f"取りこぼし品目の合計 : {sum1}円")
 
     """ 計算結果を出力
     """
