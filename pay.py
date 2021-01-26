@@ -71,27 +71,21 @@ class Pay:
                 if data == "食費":
                     if pay[0] in json_data[data]:
                         sum1 += int(pay[1])
-                        # print(pay[0], pay[1], sum1, end="\n")
                 elif data == "日用品":
                     if pay[0] in json_data[data]:
                         sum2 += int(pay[1])
-                        # print(pay[0], pay[1], sum2, end="\n")
                 elif data == "月々の支払":
                     if pay[0] in json_data[data]:
                         sum3 += int(pay[1])
-                        # print(pay[0], pay[1], sum3, end="\n")
                 elif data == "月々の交遊費":
                     if pay[0] in json_data[data]:
                         sum4 += int(pay[1])
-                        # print(pay[0], pay[1], sum4, end="\n")
                 elif data == "交遊費":
                     if pay[0] in json_data[data]:
                         sum5 += int(pay[1])
-                        # print(pay[0], pay[1], sum5, end="\n")
                 elif data == "その他":
                     if pay[0] in json_data[data]:
                         sum6 += int(pay[1])
-                        # print(pay[0], pay[1], sum6, end="\n")
 
         self.kind_cost = {"食費":sum1, "日用品":sum2, "月々の支払":sum3, "月々の交遊費":sum4, "交遊費":sum5, "その他":sum6}
 
@@ -150,7 +144,6 @@ class Pay:
         sum0, sum1 = 0, 0
         # jsonファイルのvalueを平坦化
         json_data_value = sum(json_data.values(), [])
-        # print(json_data_value, end="\n")
         # jsonファイルが拾えていない品目
         miss_data = []
 
@@ -161,7 +154,6 @@ class Pay:
 
             # jsonファイルが拾えていない品目を取得
             if pay[0] not in json_data_value:
-                # print(pay, end="\n")
                 sum1 += int(pay[1])
                 miss_data.append(pay[0])
 
