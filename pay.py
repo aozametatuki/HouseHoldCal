@@ -46,7 +46,7 @@ class Pay:
 
             # 明細に品目と金額を格納
             pay_col.append(pay_item)
-            pay_col.append(pay[4])
+            pay_col.append(pay[7])
             # 一行分の明細を格納
             self.pay_after.append(pay_col)
 
